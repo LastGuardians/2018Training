@@ -18,5 +18,8 @@
     <ClCompile Include="function template.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="class template.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

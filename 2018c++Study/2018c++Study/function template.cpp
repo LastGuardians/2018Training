@@ -16,7 +16,7 @@ template<> const double& Max(const double& a, const double& b)
 	return a > b ? a : b;
 }
 
-// 지정된 값만큼 더해준다.
+// non-type 함수 템플릿 : 지정된 값만큼 더해준다.
 template <typename T, int Val> T AddValue(T const& curValue)
 {
 	return curValue + Val;
