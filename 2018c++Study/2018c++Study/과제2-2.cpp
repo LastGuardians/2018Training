@@ -66,6 +66,7 @@ bool GameRoomUser::AddUser(UserInfo & tUserInfo)
 	}
 	if (true == IsEmpty())
 	{
+		// 방장 지정
 		strcpy(_MasterUserName, tUserInfo._UserName);
 	}
 
