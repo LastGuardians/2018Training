@@ -3,7 +3,10 @@
 
 using namespace std;
 
-// list 활용 과제
+/* 
+	과제 1
+	list 활용 과제 - 도형 만들기
+*/
 
 class Point
 {
