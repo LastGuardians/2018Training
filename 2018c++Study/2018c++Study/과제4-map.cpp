@@ -1,5 +1,6 @@
 #include <iostream>
 #include <map>
+#include <unordered_map>
 #include <string>
 #include <functional>
 
@@ -94,6 +95,9 @@ int main()
 	
 	// 아이템 가격을 key값으로
 	map<int, Item, greater<int>> Items3;
+	unordered_map<int, Item> Items4;
+
+	Items4.begin();
 
 	Item item4;
 	strncpy(item4.name, "활", 32);
@@ -110,8 +114,17 @@ int main()
 	Items3.insert(make_pair(item4.buyMoney, item4));
 	Items3.insert(make_pair(item5.buyMoney, item5));
 
+	Items4.insert(make_pair(item4.buyMoney, item4));
+	Items4.insert(make_pair(item5.buyMoney, item5));
+
 	cout << endl << "아이템 가격을 key 값으로 내림차순" << endl;
 	for (auto iter = Items3.begin(); iter != Items3.end(); ++iter)
+	{
+		cout << "이름 : " << iter->second.name << ", 가격 : " << iter->first << endl;
+	}
+
+	cout << endl << "unordered_map 사용" << endl;
+	for (auto iter = Items4.begin(); iter != Items4.end(); ++iter)
 	{
 		cout << "이름 : " << iter->second.name << ", 가격 : " << iter->first << endl;
 	}
