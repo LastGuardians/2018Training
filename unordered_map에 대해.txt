@@ -1,0 +1,21 @@
+[unordered_map에 대해]
+
+unordered_map은 hash로 구현되어 있다.
+
+그렇다면, 원소를 찾을 때 hash 값을 이용해 찾을 것이다.
+
+hash를 사용할 때 주의점!
+
+1) hash는 hash table의 크기를 이용해 hash 값을 계산하기 때문에
+
+hash table의 크기가 달라지면 hash 값도 달라지게 된다. -> hash table의 크기가 달라질 때, 오버헤드가 발생할 수 있다?
+
+2) 또한, 서로 다른 키의 해쉬 연산의 결과가 중복될 수가 있다.(충돌)
+
+하지만 STL의 unordered_map은 해쉬 연산 결과가 거의 중복되지 않게 잘 설계되어 있으며,
+
+만약 중복된다면 같은 버킷 인덱스에 list로 연결하게 된다.
+
+
+unordered_map의 begin은 버킷의 첫번째 인덱스를 리턴한다.
+버킷은 list로 구현되어 있다. -> 왜?
